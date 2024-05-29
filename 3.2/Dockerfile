@@ -6,9 +6,9 @@
 # specific reason to use a different one. This means January, April, July, or
 # October.
 
-FROM joinswoop/base:2023.07
+FROM joinswoop/base:2024.02
 
-LABEL maintainer="Community & Partner Engineering Team <community-partner@circleci.com>"
+LABEL maintainer="CircleCI Execution Team <eng-execution@circleci.com>"
 
 ENV RUBY_VERSION=3.2.2 \
 	RUBY_MAJOR=3.2
@@ -50,6 +50,8 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		zlib1g-dev \
 		# YJIT dep
 		rustc \
+		# Jemalloc
+		libjemalloc-dev \
     	# Build gems with Rust extensions dep
 		clang-14 && \
 	# For Ruby 3.0 install OpenSSL 1.1.1 to make it work on Ubuntu 20.04
