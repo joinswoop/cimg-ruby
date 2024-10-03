@@ -19,6 +19,8 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		dpkg-dev \
 		# Rails dep
 		ffmpeg \
+		# for cypress-visual-regression
+		gh \
 		# until the base image has it
 		libcurl4-openssl-dev \
 		libffi-dev \
@@ -45,6 +47,8 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		mupdf-tools \
 		# Rails dep
 		imagemagick \
+		# for cypress-visual-regression
+		rsync \
 		# Rails dep
 		sqlite3 \
 		zlib1g-dev \
